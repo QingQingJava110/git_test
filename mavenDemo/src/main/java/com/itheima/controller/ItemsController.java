@@ -14,6 +14,7 @@ public class ItemsController {
     private Itemservice itemservice;
     @RequestMapping("/findDetail")
     public String findDetial(Model model){
+        System.out.println("");
         Items items = itemservice.findById(1);
         model.addAttribute("item",items);
         return "itemDetail";
